@@ -1,21 +1,21 @@
-def fibonacci(n):
+def fibonacci(position):
     """
-    计算斐波那契数列的第n项
+    计算斐波那契数列的第position项
     斐波那契数列: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
     """
-    if n <= 0:
+    if position <= 0:
         return 0
-    elif n == 1:
+    elif position == 1:
         return 1
     else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        return fibonacci(position - 1) + fibonacci(position - 2)
 
-def fibonacci_sequence(n):
+def fibonacci_sequence(count):
     """
-    生成斐波那契数列的前n项
+    生成斐波那契数列的前count项
     """
     sequence = []
-    for i in range(n):
+    for i in range(count):
         sequence.append(fibonacci(i))
     return sequence
 
